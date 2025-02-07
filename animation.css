@@ -1,0 +1,7 @@
+@keyframes slideInLeft {
+    from{transform: translateX(-300px);}
+    to{transform: translateX(0);}   
+}
+.animate{
+    animation: slideInLeft 2s ease-in;
+}

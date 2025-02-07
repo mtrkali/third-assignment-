@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="animation.css">
 
   <style>
     .font-sora {
@@ -27,10 +28,14 @@
 <body class="font-sora m-0">
   <header class="bg-[#EFEBE3]">
     <!-- full navbar  -->
-    <div class="flex justify-between w-[80%] mx-auto items-center">
+    <div class="flex justify-between lg:w-[80%] mx-auto items-center border-2 border-black px-4 lg:border-none">
       <!-- navbar logo -->
-      <div>
+      <div class="hidden md:block">
         <img src="c2-assets/logo-header.png" alt="">
+      </div>
+      <!-- resoponsibe photo -->
+      <div class="block md:hidden">
+        <img src="c2-assets/Group.png" alt="">
       </div>
 
 
@@ -38,7 +43,7 @@
       <!-- nav items div  -->
       <div class="ml-12">
         <nav>
-          <ul class="flex gap-6">
+          <ul class="hidden md:flex gap-6">
             <li><a href="">product</a></li>
             <li><a href="">Services</a></li>
             <li><a href="">Contact us</a></li>
@@ -48,7 +53,7 @@
 
 
       <!-- nav button and icon div -->
-      <div class="flex gap-6 items-center">
+      <div class="hidden md:flex gap-6 items-center">
         <!-- nav icon div -->
         <div class="flex gap-2">
           <!-- search icon  -->
@@ -71,7 +76,12 @@
           <button class="px-7 py-1 rounded-lg border-2 bg-green-500 text-white">Register</button>
         </div>
       </div>
+      <!-- responbsive element -->
+      <div class="block md:hidden text-3xl">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
+
 
 
 
@@ -80,13 +90,13 @@
 
     <!-- landing- section  -->
     <!-- landing-page  -->
-    <div class="w-[70%] mx-auto py-5">
+    <div class="lg:w-[70%] w-[90%] mx-auto py-5">
 
       <!-- landing content  -->
-      <div class="w-[60%] mx-auto">
+      <div class="lg:w-[60%] w-[90%] mx-auto animate">
         <h1 class="text-4xl text-center">Freashness <span class="text-green-500">You can <br> Count</span> On, prices
           You'll Love!</h1>
-        <p class="text-center text-xs py-4">Shop your daily essentials at unbeatable prices, From fresh produce to
+        <p class="text-center text-sm py-4">Shop your daily essentials at unbeatable prices, From fresh produce to
           pantry steples, we've go you covered every day!</p>
       </div>
 
@@ -99,27 +109,27 @@
 
   <main>
     <!-- services section -->
-    <section class=" w-[80%] mx-auto py-10">
+    <section class="w-[90%] lg:w-[80%] mx-auto py-10">
       <h2 class="text-4xl text-green-500 py-3">Services</h2>
 
       <!-- service card container div -->
-      <div class="flex gap-6">
+      <div class="flex flex-col lg:flex lg:flex-row gap-6">
         <!-- service card-1 -->
-        <div class="bg-[#EFEBE3] text-center py-5 rounded-lg">
+        <div class="bg-[#EFEBE3] text-center py-12 lg:py-5 rounded-lg">
           <div class="flex justify-center
         "><img src="c2-assets/service.png" class="bg-white rounded-full w-[30%] p-2" alt=""></div>
           <h3 class="text-2xl py-3">24/7 Services</h3>
           <p class="text-xs px-4">we are ready for every weak and every single day our service time 24 hour.</p>
         </div>
         <!-- service card-2 -->
-        <div class="bg-[#EFEBE3] text-center py-5 rounded-lg">
+        <div class="bg-[#EFEBE3] text-center py-12 lg:py-5 rounded-lg">
           <div class="flex justify-center
         "><img src="c2-assets/delivery.png" class="bg-white rounded-full w-[30%] p-2" alt=""></div>
           <h3 class="text-2xl py-3">Fast Delivery</h3>
           <p class="text-xs">Our delivery system's feature that it fast and it to be arrive a product without faul.</p>
         </div>
         <!-- service card-3 -->
-        <div class="bg-[#EFEBE3] text-center py-5 rounded-lg">
+        <div class="bg-[#EFEBE3] text-center py-12 lg:py-5 rounded-lg">
           <div class="flex justify-center
         "><img src="c2-assets/healthy.png" class="bg-white rounded-full w-[30%] p-2" alt=""></div>
           <h3 class="text-2xl py-3">Healthy product</h3>
@@ -129,17 +139,17 @@
     </section>
 
     <!-- popular product section -->
-    <section class="mb-20 bg-[#EFEBE3]">
+    <section class=" bg-[#EFEBE3]">
       <!-- popular product section main div -->
-      <div class="w-[80%] mx-auto pb-16">
-        <h2 class="text-3xl text-green-500 py-10">Popular Product</h2>
+      <div class="w-[90%] lg:w-[80%] mx-auto pb-16">
+        <h2 class="text-3xl text-green-500 py-5">Popular Product</h2>
         <!-- popular product card container  -->
-        <div class="flex gap-3">
+        <div class="flex flex-col lg:flex-row gap-4">
 
           <!-- card -1 -->
           <div class="rounded-lg bg-gradient-to-br from-green-500 to-green-100 p-4 relative h-[360px]">
             <h2 class="text-2xl text-white font-semibold">30% off</h2>
-            <p class="text-xs py-5">Discover a world of treats toys, and essentials handpicked for.</p>
+            <p class="text-xs py-5 font-medium w-[60%]">Discover a world of treats toys, and essentials handpicked for.</p>
             <button class="px-5 py-1 border-1 border-black rounded-lg bg-[#FFFFFF]">Buy Bow</button>
             <div class="absolute inset-0  bg-[url('./c2-assets/vegetable-offer.png')] bg-no-repeat bg-right-bottom">
             </div>
@@ -147,122 +157,122 @@
           </div>
 
           <!-- small card container div -->
-          <div class="grid grid-cols-3 gap-3.5">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3.5">
 
             <!-- sm card -1 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/onion.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class=""><img src="c2-assets/onion.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
-              <div class="w-2/3">
+              <div class="">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Onion 1 KG</h4>
+                <h4 class="font-semibold">Onion 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -2 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Tomato 500 g</h4>
+                <h4 class="font-semibold">Tomato 500 g</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -3 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Potato 1 KG</h4>
+                <h4 class="font-semibold">Potato 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -4 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Tomato 500 g</h4>
+                <h4 class="font-semibold">Tomato 500 g</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -5 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/onion.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/onion.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Onion 1 KG</h4>
+                <h4 class="font-semibold">Onion 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -6 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/tomato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Tomato 500 g</h4>
+                <h4 class="font-semibold">Tomato 500 g</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -7 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/onion.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/onion.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Onion 1 KG</h4>
+                <h4 class="font-semibold">Onion 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -8 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="flex gap-3 p-2 lg:p-0 lg:pl-3  drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Potata 1 KG</h4>
+                <h4 class="font-semibold">Potata 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
             <!-- sm card -9 -->
-            <div class="flex gap-3 pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center w-full">
+            <div class="hidden lg:flex gap-3 lg:pl-3 drop-shadow-xl bg-[#FFFFFF] rounded-lg items-center">
               <!-- sm card image div -->
-              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3]" alt=""></div>
+              <div class="w-1/3"><img src="c2-assets/potato.png" class="bg-[#EFEBE3] rounded-lg" alt=""></div>
               <!-- sm card content div -->
               <div class="w-2/3">
                 <div class="flex gap-2"><i class="fa-regular fa-star text-amber-500 font-bold"></i>
                   <h6 class="font-medium text-sm">4.5</h6>
                 </div>
-                <h4 class="text- font-semibold">Potata 1 KG</h4>
+                <h4 class="font-semibold">Potata 1 KG</h4>
                 <h5>39.99$</h5>
               </div>
             </div>
@@ -273,37 +283,37 @@
     </section>
 
     <!-- Arrival section  -->
-    <section class="mb-20">
+    <section>
       <!-- full section's main div  -->
-      <div class="w-[80%] mx-auto">
-        <h2 class="text-4xl text-green-600 my-10">Arrival & Offers</h2>
+      <div class="w-[95%] lg:w-[80%] mx-auto">
+        <h2 class="text-4xl text-green-600 py-5">Arrival & Offers</h2>
         <!-- card-container div  -->
-        <div class="flex gap-3">
+        <div class="flex flex-col lg:flex-row  gap-3">
         <!-- card-1 -->
-        <div class="bg-green-500 flex gap-5 rounded-lg p-3">
+        <div class="lg:relative bg-green-500 flex justify-between rounded-lg p-3 lg:flex-1">
           <!-- card content div -->
           <div class="flex flex-col justify-evenly">
             <img src="c2-assets/dawat-logo.png" class="" alt="">
-            <button class="px-3 py-2 bg-green-300 rounded-lg text-white ">Cook Exotic Dishes</button>
+            <button class="px-3 py-1 bg-green-300 rounded-lg text-white text-sm lg:text-lg">Cook Exotic Dishes</button>
             <h2 class="text-3xl text-white">UP to <span class="font-bold">20% OFF</span></h2>
           </div>
           <!-- card image div  -->
-          <div>
-            <img src="c2-assets/dawat-mock-up.png" alt="">
+          <div class="lg:absolute left-80">
+            <img src="c2-assets/dawat-mock-up.png"  alt="">
           </div>
         </div>
 
         <!-- card-2 -->
-        <div class="bg-blue-500 flex gap-5 rounded-lg p-5">
+        <div class="bg-blue-500 flex justify-between rounded-lg px-5">
           <!-- card content div -->
           <div class="">
             <img src="c2-assets/india-gate-logo.png" alt="">
-            <button class="px-3 py-1 bg-blue-300 rounded-lg text-white my-3 ">World's No.1 Rice</button>
+            <button class="px-3 py-1 bg-blue-300 rounded-lg text-white    lg:my-7 my-4">World's No.1 Rice</button>
             <h2 class="text-3xl text-white">UP to <span class="font-bold">40% OFF</span></h2>
           </div>
           <!-- card image div  -->
           <div>
-            <img src="c2-assets/india-gate-mock-up.png" alt="">
+            <img src="c2-assets/india-gate-mock-up.png" class="w-[85%] lg:w-full" alt="">
           </div>
         </div>
 
@@ -311,35 +321,36 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="mt-96 lg:mt-0">
     <!-- footer's main div  -->
     <div class=" bg-green-700 relative mt-60">
       <!-- footer absolute section -->
-      <div class="absolute bg-[#EFEBE3] flex gap-10 justify-evenly w-[80%] rounded-lg -top-[45%] left-[135px]">
+      <div class="absolute bg-[#EFEBE3] flex flex-col lg:flex-row gap-2 lg:gap-10 justify-evenly w-[80%] rounded-lg -top-[45%] left-[10%]  lg:-top-[45%] lg:left-[135px] py-5">
         <!-- footer absolute img div  -->
          <div>
           <img src="c2-assets/vegetable-busket.png" alt="">
          </div>
          <!-- footer absolute content div -->
-         <div class="my-auto">
-          <h3 class="text-3xl font-semibold">Get Grocery News!</h3>
-          <p class="my-4">Exclusive training tips, ticks, product deals and more.</p>
-          <input type="email" placeholder="Enter email" class="rounded-lg h-16 w-[400px] pl-4 my-5">
+         <div class="my-auto px-5 lg:px-0">
+          <h3 class="text-3xl font-semibold ">Get Grocery News!</h3>
+          <p class="py-4 lg:py-6">Exclusive training tips, ticks, product deals and more.</p>
+          <input type="email" placeholder="Enter email" class="rounded-lg h-16 w-[100%] lg:w-[400px] pl-4 mb-3 lg:mb-5">
           <br>
-          <button class="bg-green-500 px-5 py-2 rounded-lg text-white">Subscribe</button>
+          <div class="flex justify-center"><button class="bg-green-500 px-5 py-2 rounded-lg text-white">Subscribe</button></div>
+          
          </div>
       </div>
       <!-- footer text div -->
-      <div class="flex justify-between pt-60 pb-5 w-[80%] mx-auto">
+      <div class="flex flex-col lg:flex-row w-[80%] mx-auto justify-between pt-64 pb-5 gap-20 lg:gap-0 ">
         <!-- footer logo div -->
-        <div class="flex flex-col gap-2">
-          <img src="c2-assets/logo-footer.png" alt="">
-          <p class="text-xs text-stone-200">Discover a world of treats. toys, and <br> essentials handpicked for your furry <br>friends</p>
+        <div class="flex flex-col gap-2 lg:pt-0 pt-8">
+          <img src="c2-assets/logo-footer.png" class="w-[25%]" alt="">
+          <p class="text-lg lg:text-xs text-stone-200 lg:w-[50%]">Discover a world of treats. toys, and essentials handpicked for your furry friends</p>
         </div>
         <!-- footer list div -->
         <div>
           <nav>
-            <ul class="flex flex-col gap-2">
+            <ul class="flex flex-col gap-5 lg:gap-3">
               <li class="text-white font-semibold"><a href="">Product</a></li>
               <li class="text-white font-semibold"><a href="">Service</a></li>
               <li class="text-white font-semibold"><a href="">Contact us</a></li>
